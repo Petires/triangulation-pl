@@ -105,10 +105,10 @@ int Triangulate(int nv, XYZ pxyz[], TRIANGLE v[], int &ntri)
     complete = new int[trimax];
 //Analogiczne przypisanie pamięci dla krawędzi
     edges = new EDGE[emax];
-/*
-      Find the maximum and minimum vertex bounds.
-      This is to allow calculation of the bounding triangle
-*/
+
+// Znajdź punkty skrajne.
+// Potrzebne do tworzenia trójkąta zawierającego wszystkie punkty.
+
     xmin = pxyz[0].x;
     ymin = pxyz[0].y;
     xmax = xmin;
